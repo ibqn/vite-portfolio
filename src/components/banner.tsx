@@ -1,3 +1,7 @@
 export const Banner = () => {
-  return <div>Banner</div>
+  return (
+    <section id="home" className="section">
+      Banner
+    </section>
+  )
 }
