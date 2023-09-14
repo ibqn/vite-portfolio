@@ -29,6 +29,7 @@ export const Nav = () => {
                 to={path}
                 activeClass="active"
                 spy
+                {...(index === 0 && { offset: -200 })}
                 smooth
                 className="flex h-[60px] w-[60px] cursor-pointer items-center justify-center"
               >
