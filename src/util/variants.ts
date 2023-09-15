@@ -1,11 +1,11 @@
-export enum Direction {
+export enum FadeDirection {
   up = 'up',
   down = 'down',
   left = 'left',
   right = 'right',
 }
 
-export const fadeIn = (direction: Direction, delay: number) => {
+export const fadeIn = (direction: FadeDirection, delay: number) => {
   return {
     hidden: {
       y: direction === 'up' ? 80 : direction === 'down' ? -80 : 0,
