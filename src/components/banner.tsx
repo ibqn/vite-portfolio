@@ -6,7 +6,10 @@ import { fadeIn, FadeDirection } from '@/util/variants'
 
 export const Banner = () => {
   return (
-    <section id="home" className="section">
+    <section
+      id="home"
+      className="flex min-h-[85hv] items-center lg:min-h-[78vh]"
+    >
       <div className="container mx-auto">
         <div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12">
           <div className="flex-1 text-center font-secondary lg:text-left">
