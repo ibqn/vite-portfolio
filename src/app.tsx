@@ -1,17 +1,8 @@
-import {
-  About,
-  Banner,
-  Contact,
-  Header,
-  Nav,
-  Services,
-  Work,
-} from '@/components'
+import { About, Banner, Contact, Nav, Services, Work } from '@/components'
 
 export function App() {
   return (
-    <div className="bg-site overflow-hidden bg-cover bg-no-repeat">
-      <Header />
+    <div className="overflow-hidden bg-site bg-cover bg-no-repeat">
       <Banner />
       <Nav />
       <About />

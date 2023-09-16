@@ -20,6 +20,7 @@ export const About = () => {
             viewport={{ once: true }}
             className="h-[640px] flex-1 bg-about bg-contain bg-top bg-no-repeat mix-blend-lighten"
           ></motion.div>
+
           <motion.div
             variants={fadeIn(FadeDirection.left, 0.5)}
             initial="hidden"
