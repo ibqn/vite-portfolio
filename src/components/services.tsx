@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { BsArrowUpRight } from 'react-icons/bs'
 
 type Service = {
   name: string
@@ -57,20 +58,48 @@ export const Services = () => {
   return (
     <section id="services" className="section">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col gap-20 lg:flex-row">
           <div className="mb-12 flex-1 bg-no-repeat mix-blend-lighten lg:mb-0 lg:bg-services lg:bg-bottom">
             <h2 className="h2 mb-6 text-accent">Services I offer</h2>
-            <h3 className="h3 mx-w-[455px] mb-16">
+            <h3 className="h3 mb-16 max-w-[455px]">
               I'm a Freelance Frontend Developer with more than five years of
               experience.
             </h3>
             <button className="btn btn-sm">See my work</button>
           </div>
 
-          <div>
-            <div>
+          <div className="flex-1">
+            <div className="flex flex-col gap-[38px]">
               {services.map((service, index) => {
-                return <div key={index}></div>
+                const { name, description, link } = service
+
+                return (
+                  <div
+                    className="flex min-h-[146px] flex-row gap-2 border-b border-white/20"
+                    key={index}
+                  >
+                    <div className="max-w-[476px]">
+                      <h4 className="mb-6 font-primary text-[20px] font-semibold tracking-wider">
+                        {name}
+                      </h4>
+                      <p className="font-secondary leading-tight">
+                        {description}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-1 flex-col items-end gap-y-[42px]">
+                      <a
+                        href="#"
+                        className="btn flex h-9 w-9 items-center justify-center"
+                      >
+                        <BsArrowUpRight />
+                      </a>
+                      <a href="#" className="text-gradient text-end text-sm">
+                        {link}
+                      </a>
+                    </div>
+                  </div>
+                )
               })}
             </div>
           </div>
