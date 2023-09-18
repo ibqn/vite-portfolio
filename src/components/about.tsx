@@ -12,13 +12,13 @@ export const About = () => {
   return (
     <section id="about" className="section" ref={ref}>
       <div className="container mx-auto">
-        <div className="flex h-screen flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0">
+        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0">
           <motion.div
             variants={fadeIn(FadeDirection.right, 0.3)}
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: true }}
-            className="h-[640px] flex-1 bg-about bg-contain bg-top bg-no-repeat mix-blend-lighten"
+            className="min-h-[640px] flex-1 bg-about bg-contain bg-top bg-no-repeat mix-blend-lighten"
           ></motion.div>
 
           <motion.div
