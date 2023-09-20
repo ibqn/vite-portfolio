@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
 import { BsArrowUpRight } from 'react-icons/bs'
+import { motion } from 'framer-motion'
+import { FadeDirection, fadeIn } from '@/util/variants'
 
 type Service = {
   name: string
@@ -59,16 +61,28 @@ export const Services = () => {
     <section id="services" className="section">
       <div className="container mx-auto">
         <div className="flex flex-col gap-20 lg:flex-row">
-          <div className="mb-12 flex-1 bg-no-repeat mix-blend-lighten lg:mb-0 lg:bg-services lg:bg-bottom">
+          <motion.div
+            variants={fadeIn(FadeDirection.right, 0.3)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: true }}
+            className="mb-12 flex-1 bg-no-repeat mix-blend-lighten lg:mb-0 lg:bg-services lg:bg-bottom"
+          >
             <h2 className="h2 mb-6 text-accent">Services I offer</h2>
             <h3 className="h3 mb-16 max-w-[455px]">
               I'm a Freelance Frontend Developer with more than five years of
               experience.
             </h3>
             <button className="btn btn-sm">See my work</button>
-          </div>
+          </motion.div>
 
-          <div className="flex-1">
+          <motion.div
+            variants={fadeIn(FadeDirection.left, 0.5)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: true }}
+            className="flex-1"
+          >
             <div className="flex flex-col gap-[38px]">
               {services.map((service, index) => {
                 const { name, description, link } = service
@@ -102,7 +116,7 @@ export const Services = () => {
                 )
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
