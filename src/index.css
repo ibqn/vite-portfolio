@@ -76,6 +76,6 @@
   }
 
   .section {
-    @apply flex items-center py-20 lg:min-h-screen lg:py-8;
+    @apply flex items-center py-20 lg:min-h-screen lg:py-12;
   }
 }
