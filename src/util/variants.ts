@@ -5,7 +5,7 @@ export enum FadeDirection {
   right = 'right',
 }
 
-export const fadeIn = (direction: FadeDirection, delay: number) => {
+export const fadeIn = (direction: FadeDirection, delay = 0.0) => {
   return {
     hidden: {
       y: direction === 'up' ? 80 : direction === 'down' ? -80 : 0,

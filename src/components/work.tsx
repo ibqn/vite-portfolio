@@ -3,13 +3,20 @@ import { motion } from 'framer-motion'
 import PortfolioImageOne from '@/assets/portfolio-img1.png'
 import PortfolioImageTwo from '@/assets/portfolio-img2.png'
 import PortfolioImageThree from '@/assets/portfolio-img3.png'
+import { FadeDirection, fadeIn } from '@/util/variants'
 
 export const Work = () => {
   return (
     <section id="work" className="section">
       <div className="container mx-auto">
         <div className="flex flex-col gap-x-10 lg:flex-row">
-          <div className="mb-10 flex flex-1 flex-col gap-y-12 lg:mb-0">
+          <motion.div
+            variants={fadeIn(FadeDirection.right, 0.5)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: true }}
+            className="mb-10 flex flex-1 flex-col gap-y-12 lg:mb-0"
+          >
             <div>
               <h2 className="h2 leading-tight text-accent">
                 My Latest
@@ -41,9 +48,15 @@ export const Work = () => {
                 <span className="text-3xl text-white">Project Portfolio</span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-1 flex-col gap-y-10">
+          <motion.div
+            variants={fadeIn(FadeDirection.left, 0.5)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: true }}
+            className="flex flex-1 flex-col gap-y-10"
+          >
             <div className="group relative overflow-hidden rounded-xl border-2 border-white/50">
               <div className="absolute z-40 h-full w-full transition-all duration-300 group-hover:bg-black/70"></div>
 
@@ -75,7 +88,7 @@ export const Work = () => {
                 <span className="text-3xl text-white">Project Portfolio</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
