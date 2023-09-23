@@ -1,7 +1,9 @@
 export const Contact = () => {
   return (
     <section id="contact" className="section">
-      Contact
+      <div className="container mx-auto">
+        <div></div>
+      </div>
     </section>
   )
 }
