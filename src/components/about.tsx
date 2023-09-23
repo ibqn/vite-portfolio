@@ -5,7 +5,7 @@ import { FadeDirection, fadeIn } from '@/util/variants'
 
 export const About = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.5,
   })
 
@@ -41,12 +41,12 @@ export const About = () => {
             <div className="mb-12 flex gap-x-6 lg:gap-x-10">
               <div>
                 <div className="text-gradient font-tertiary text-[40px] leading-[1.2]">
-                  {inView && <CountUp start={0} end={13} duration={3} />}
+                  {inView && <CountUp start={0} end={10} duration={3} />}k+
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
-                  Years of
+                  Projects
                   <br />
-                  Experience
+                  Completed
                 </div>
               </div>
 
