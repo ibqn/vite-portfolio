@@ -1,4 +1,8 @@
-# React + TypeScript + Vite
+# Portfolio page in React and Tailwind
+
+## Screenshot
+
+![Portfolio Page](./screenshot.png)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
